@@ -28,10 +28,10 @@ const Login = () => {
   return (
     <div className="page-container" style={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '12px', color: '#1a1a1a' }}>
+        <h1 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '12px', color: 'var(--text-primary)' }}>
           환영합니다 👋
         </h1>
-        <p style={{ color: '#666', fontSize: '16px' }}>명함을 스마트하게 관리하세요</p>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '16px' }}>명함을 스마트하게 관리하세요</p>
       </div>
 
       <button 
@@ -66,7 +66,7 @@ const Login = () => {
         </p>
       )}
 
-      <p style={{ marginTop: '20px', fontSize: '13px', color: '#888', textAlign: 'center' }}>
+      <p style={{ marginTop: '20px', fontSize: '13px', color: 'var(--text-secondary)', textAlign: 'center' }}>
         로그인하면 모든 기기에서 명함을 동기화할 수 있습니다.<br/>
         (스마트폰에서 로그인이 반복되면 '개인정보 보호' 설정을 확인해주세요)
       </p>

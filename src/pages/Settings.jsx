@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { LogOut, User, Database, RefreshCcw } from 'lucide-react';
 import { migrateLocalDataToFirestore } from '../utils/migration';
 import { storage } from '../utils/storage';
+import packageJson from '../../package.json';
 
 const Settings = () => {
   const { currentUser, logout } = useAuth();
@@ -109,7 +110,7 @@ const Settings = () => {
 
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px', padding: '8px', background: 'var(--bg-secondary)', borderRadius: '8px' }}>
               <span style={{ fontSize: '13px' }}>폰에 있는 명함:</span>
-              <span style={{ fontWeight: 'bold', color: 'var(--primary-color)' }}>{storage.getContacts().length}개</span>
+              <span style={{ fontWeight: 'bold', color: 'var(--primary-color)' }}>{storage.getContacts(currentUser?.uid).length}개</span>
             </div>
             <button 
               onClick={async () => {
@@ -249,7 +250,7 @@ const Settings = () => {
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderTop: '1px solid var(--border-color)' }}>
             <span style={{ color: 'var(--text-primary)', fontSize: '15px' }}>앱 버전</span>
-            <span style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>1.0.0</span>
+            <span style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>{packageJson.version}</span>
           </div>
         </div>
         

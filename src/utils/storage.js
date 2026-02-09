@@ -82,5 +82,11 @@ export const storage = {
     ];
     legacyKeys.forEach(k => localStorage.removeItem(k));
     console.log("Storage: Legacy data scrubbed.");
+  },
+
+  clearGuestData: () => {
+    localStorage.removeItem(STORAGE_KEYS.GUEST_CONTACTS);
+    localStorage.removeItem(STORAGE_KEYS.GUEST_MY_CARD);
+    console.log("Storage: Guest data cleared.");
   }
 };

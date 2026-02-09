@@ -19,6 +19,14 @@ export const migrateLocalDataToFirestore = async (userId, isManual = false) => {
     if (!myCardSnap.exists() && localMyCard) {
       console.log("Migration: Local MyCard found, uploading...");
       await setDoc(myCardRef, localMyCard);
+      // We only clear the guest My Card if we've successfully uploaded it.
+      // However, storage.clearGuestData() clears BOTH contacts and card. 
+      // It's safer to clear specifically or just move clearGuestData() to the end.
+      // Let's just remove the specific key here if we want granular control, 
+      // or we can just rely on the end cleanup.
+      // But wait, clearGuestData clears contacts too. If contacts migration fails later, we lose contacts.
+      // So we should probably clear specifically here.
+      localStorage.removeItem('bizcard_my_card_guest');
     }
 
     // 2. Migrate Contacts (Skip dummy data by passing false)
@@ -48,6 +56,7 @@ export const migrateLocalDataToFirestore = async (userId, isManual = false) => {
       await batch.commit();
       
       localStorage.setItem(`migrated_contacts_${userId}`, 'true');
+      storage.clearGuestData(); // Clear guest data to prevent it from merging into another account
       if (isManual) {
         alert("✅ 복구 완료! 이제 명함들이 목록에 나타나야 합니다.");
       }
