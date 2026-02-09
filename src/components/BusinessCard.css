@@ -1,0 +1,203 @@
+.card-container {
+  width: 100%;
+  max-width: 380px;
+  height: 240px;
+  margin: 0 auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-container.card-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Front Design */
+.card-front {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+}
+
+.card-content {
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo-box {
+  width: 96px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.personal-id {
+  text-align: right;
+  font-size: 10px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.personal-id strong {
+  display: block;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.card-body .name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card-body .title {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-circles {
+  display: flex;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: -10px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flip-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+.flip-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Back Design */
+.card-back {
+  background: #1e293b; /* Dark slate */
+  color: white;
+  transform: rotateY(180deg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-content {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.qr-frame {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 0;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code {
+  width: 140px;
+  height: 140px;
+  display: block;
+  object-fit: contain;
+}
+
+.card-back h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-back p {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #cbd5e1;
+  font-size: 10px;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: white;
+}
+
+.action-btn span {
+  font-weight: 500;
+}

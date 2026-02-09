@@ -1,0 +1,70 @@
+export const contacts = [
+  {
+    id: 1,
+    name: "김민수",
+    company: "테크 스타트업",
+    title: "CEO",
+    phone: "010-1234-5678",
+    email: "minsu@techstartup.com",
+    address: "서울시 강남구 테헤란로 123",
+    website: "www.techstartup.com",
+    tags: ["파트너", "개발"],
+    isFavorite: true,
+    color: "var(--primary-color)",
+    cardFront: "https://via.placeholder.com/300x180/2563eb/ffffff?text=Front",
+    cardBack: "https://via.placeholder.com/300x180/1e293b/ffffff?text=Back",
+    orientation: 'landscape'
+  },
+  {
+    id: 2,
+    name: "이영희",
+    company: "디자인 스튜디오",
+    title: "수석 디자이너",
+    phone: "010-9876-5432",
+    email: "yh.lee@designstudio.kr",
+    address: "서울시 마포구 홍대입구 456",
+    website: "www.designstudio.kr",
+    tags: ["디자인", "외주"],
+    isFavorite: false,
+    color: "#E91E63"
+  },
+  {
+    id: 3,
+    name: "박준호",
+    company: "글로벌 마케팅",
+    title: "마케팅 팀장",
+    phone: "010-5555-4444",
+    email: "junho.park@globalmkt.com",
+    address: "서울시 종로구 광화문 789",
+    website: "www.globalmkt.com",
+    tags: ["마케팅", "지인"],
+    isFavorite: true,
+    color: "#9C27B0"
+  },
+  {
+    id: 4,
+    name: "최수진",
+    company: "금융 솔루션",
+    title: "재무 컨설턴트",
+    phone: "010-1111-2222",
+    email: "sujin.choi@finsol.co.kr",
+    address: "서울시 영등포구 여의도동 101",
+    website: "www.finsol.co.kr",
+    tags: ["금융"],
+    isFavorite: false,
+    color: "#4CAF50"
+  },
+  {
+    id: 5,
+    name: "정우성",
+    company: "무역 상사",
+    title: "해외 영업 부장",
+    phone: "010-3333-7777",
+    email: "ws.jung@trading.com",
+    address: "부산시 해운대구 센텀시티 202",
+    website: "www.trading.com",
+    tags: ["영업", "해외"],
+    isFavorite: false,
+    color: "#FF9800"
+  }
+];

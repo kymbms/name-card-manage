@@ -1,0 +1,62 @@
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utilities for interactions */
+.btn-interactive {
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-interactive:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+.btn-interactive:active {
+  transform: scale(0.95);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  position: relative;
+}

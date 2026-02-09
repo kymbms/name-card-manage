@@ -1,0 +1,211 @@
+.top-brand-bar {
+    padding: 16px 20px;
+    background-color: var(--bg-color);
+}
+
+.brand-logo {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.greeting-section {
+    padding: 10px 20px 24px;
+}
+
+.greeting-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.highlight-name {
+    color: var(--primary-color);
+}
+
+.greeting-sub {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 0 20px 24px;
+}
+
+.action-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.action-card:active {
+    transform: scale(0.98);
+}
+
+.action-card span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scan-icon { background-color: #eff6ff; color: var(--primary-color); }
+.add-icon { background-color: #f0fdf4; color: #22c55e; }
+.search-icon { background-color: #fff7ed; color: #f97316; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 16px;
+}
+
+.section-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.see-all {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.recent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 20px 24px;
+}
+
+.recent-card-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-avatar-lg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.contact-avatar-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info-lg h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--text-primary);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.contact-info-lg {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-role {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-company {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin: 4px 0 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.share-banner {
+    margin: 0 20px 24px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    padding: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.share-text h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+.share-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.share-btn-small {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
